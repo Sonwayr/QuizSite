@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<h1 class="title">{{title}}</h1>
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ next }}">
+        <div class="test">
+    {% for f in form %}
+
+    <div><label class="test-name" for="{{ f.id_for_label }}">{{f.label}}: </label><p class="input-name">{{ f }}</p></div>
+    <div class="form-error">{{ f.errors }}</div>
+    {% endfor %}
+            <div>
+    <button type="submit" class="start-button">Добавить</button>
+    <a type="submit" class="back-button" href="{% url 'main' %}">На главную</a>
+                </div>
+    </div>
+</form>
+{% endblock %}

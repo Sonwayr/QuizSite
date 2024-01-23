@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<h1 class="title">Информация про тест "{{test.name}}"</h1>
+<div class="question">
+    <h1 class="test-name">{{ test.name }}</h1>
+    <h1 class="test-description">{{ test.description }}</h1>
+    <h1 class="test-q-q">Вопросов: {{ test.question_quantity }}</h1>
+    <div>
+    <a href="{% url 'redact_test' pk=test.pk %}" class="start-button">Редактировать</a>
+    <a href="{% url 'delete_test' test_id=test.pk %}" class="back-button">Удалить</a>
+        </div>
+</div>
+
+{% endblock %}

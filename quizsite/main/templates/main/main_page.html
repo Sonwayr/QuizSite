@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+{% block content %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li
+            {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<form class="search-form" action="{% url 'main' %}" method="get">
+    <input class="search-input" type="text" name="search" placeholder="Поиск" required>
+    <button class="search-button" type="submit">Поиск</button>
+    {% if search %}
+    <a class="search-button" href="{% url 'main' %}">Сброс</a>
+    {% endif %}
+</form>
+{% if search %}
+<h1 class="title">Результат поиска по: {{search}}</h1>
+{% endif %}
+{% if tests %}
+{% for t in tests %}
+
+<a href="{{ t.get_absolute_url_info }}" class="test">
+    <div class="test-name">{{ t.name }}</div>
+    <div class="test-description">{{ t.description }}</div>
+    <div class="test-q-q">Вопросов: {{ t.question_quantity }}</div>
+</a>
+
+{% endfor %}
+{% else %}
+<h1 class="title">По вашему запросу ничего не найдено</h1>
+{% endif %}
+{% endblock %}

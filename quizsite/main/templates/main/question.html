@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ next }}">
+    <div class="question">
+        {% for f in form %}
+        <p class="question_number-of-question_quantity">{{ form.question_number }}/{{ form.question_quantity }} </p>
+        <div><label class="test-name" for="{{ f.id_for_label }}">{{f.label}} </label>
+            <p>{{ f }}</p></div>
+
+        <div class="form-error">{{ f.errors }}</div>
+        {% endfor %}
+        <div>
+            {% if form.question_number is not form.question_quantity %}
+            <button type="submit" class="start-button">Ответить</button>
+            {% else %}
+            <button type="submit" class="start-button">Завершить тест</button>
+            {% endif %}
+
+        </div>
+</form>
+{% endblock %}

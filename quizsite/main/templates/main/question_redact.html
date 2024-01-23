@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<h1 class="title">{{ title }}</h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="reg-log-form">
+        {% for f in form %}
+        <p class="title"><label for="{{ f.id_for_label }}">{{f.label}}: </label></p>
+        <p>{{ f }}</p>
+        <div class="form-error">{{ f.errors }}</div>
+        {% endfor %}
+      <div>
+      <button type="submit" class="start-button">Сохранить</button>
+      <a href="{% url 'redact_test' pk=test_id  %}" class="back-button">Назад</a>
+      </div>
+    </div>
+</form>
+{% endblock %}

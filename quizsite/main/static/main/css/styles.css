@@ -1,0 +1,306 @@
+body {
+  margin: 0; /* Удаление отступов от краев страницы */
+  background-color: #333333; /* Цвет заднего фона (темно-синий) */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black; /* Изменение цвета заднего фона на черный */
+  height: 70px;
+  width: 100%;
+
+}
+
+.logo {
+
+  margin-right: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff8000;
+  font-family: Courier New, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста */
+  transition: transform 0.3s ease-in-out; /* Плавный переход при наведении */
+  text-decoration: none;
+
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff000; /* Изменение цвета шрифта (в данном примере - красный) */
+  font-family: Courier New, sans-serif; /* Изменение шрифта на Arial */
+  text-decoration: none;
+  margin: auto;
+}
+
+/* styles.css */
+
+.test {
+  border: 1px solid black;
+  margin: 75px 15%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  background-color: #ff8000; /* Фоновый цвет дива */
+  color: #FFFFFF; /* Цвет текста */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Тень */
+  border-radius: 10px; /* Закругление углов */
+  transition: transform 0.3s ease; /* Анимация преобразования */
+}
+
+.test-name {
+  font-weight: bold;
+  color: #ffff00;
+  height: 15%;
+  text-align: center;
+  font-size: 24px;
+  font-family: Courier New, sans-serif; /* Изменение шрифта на Arial */
+
+}
+
+.test-description {
+  margin-top: 5px;
+  height: 75%;
+
+
+  font-family: Courier New, sans-serif;
+  font-size: 18px; /* Пример размера шрифта */
+
+}
+
+.test-q-q {
+  font-style: italic;
+  margin-top: 5px;
+  height: 10%;
+
+
+  font-family: Courier New, sans-serif;
+  font-size: 16px; /* Пример размера шрифта */
+
+}
+
+.test:hover {
+  transform: scale(1.1); /* Увеличение размера при наведении */
+}
+
+/* styles.css */
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-top: 50px;
+}
+
+.search-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  margin: 0px 5px;
+  background-color: #ff8000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.search-button:hover {
+  background-color: #ff9900;
+}
+
+.start-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #006F00;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #FFA500;
+}
+
+.start-button:focus {
+  outline: none;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6F0000;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #FFA500;
+}
+
+.back-button:focus {
+  outline: none;
+}
+
+/* styles.css */
+.input-name {
+  display: inline-block;
+  margin-left: 5px; /* Регулирует отступ между меткой и полем ввода */
+}
+
+.result {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: Courier New, sans-serif; /* Изменение шрифта на Arial */
+
+}
+
+.question_number-of-question_quantity {
+    margin-left: 90%;
+    padding: 5px;
+    font-weight: bold;
+    color: #200000;
+    font-size: 20px;
+    height: 10px;
+}
+
+.question {
+  border: 1px solid black;
+  margin: 75px 15%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  background-color: #ff8000; /* Фоновый цвет дива */
+  color: #FFFFFF; /* Цвет текста */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Тень */
+  border-radius: 10px; /* Закругление углов */
+  transition: transform 0.3s ease; /* Анимация преобразования */
+}
+
+.reg-log-form {
+  border: 1px solid black;
+  margin: 75px 35%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  background-color: #ff8000; /* Фоновый цвет дива */
+  color: #FFFFFF; /* Цвет текста */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Тень */
+  border-radius: 10px; /* Закругление углов */
+  transition: transform 0.3s ease; /* Анимация преобразования */
+}
+
+.reg-label {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: Courier New, sans-serif; /* Изменение шрифта на Arial */
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #fff000; /* Изменение цвета ссылок (в данном примере - красный) */
+  font-family: Comic Sans MS,, sans-serif; /* Изменение шрифта на Arial */
+
+}
+
+
+.add-question-button {
+  font-weight: bold;
+  color: #ffff00;
+  height: 15%;
+  text-align: center;
+  font-size: 24px;
+  font-family: Courier New, sans-serif; /* Изменение шрифта на Arial */
+
+
+}
+
+.content-text {
+	margin: 60px 0 0 30px;
+	color: #000;
+	font-size: 20px;
+	font-family: Yandex Sans Display Light;
+}
+.content-text h1 {font-size: 32px;}
+
+
+.list-pages {
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+.list-pages ul {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+
+}
+.list-pages ul li {
+	display: inline-block;
+	margin: 0 20px 0 0;
+	background: #ff8000
+
+}
+.list-pages a {
+	color: #000;
+	font-size: 24px;
+	text-decoration: none;
+    color: #ffff00;
+}
+.list-pages .page-num, .page-num-selected {
+	display: inline-block;
+	width: 60px;
+	height: 44px;
+	padding: 16px 0 0 0;
+	border: 1px solid #d0d0d0;
+	border-radius: 30px;
+
+}
+.list-pages .page-num:hover {
+	box-shadow: 3px 3px 1px #d0d0d0;
+
+}
+.list-pages .page-num-selected {
+	border: none;
+	color: #000;
+	font-size: 20px;
+	color: #ffff00
+
+}
+.list-pages .page-num-selected:hover {
+	box-shadow: none;
+
+}
+
+

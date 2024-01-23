@@ -1,0 +1,15 @@
+<!-- result.html -->
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="test">
+    <h1 class="test-name">Статистика и результат</h1>
+    <h1 class="result">Количество правильных ответов: {{ correct_answers }}/{{question_quantity}}</h1>
+    <h1 class="result">Количество неправильных ответов: {{ incorrect_answers }}</h1>
+    <h1 class="title">Результат: {{result}}%</h1>
+    <div>
+    <a href="{% url 'question' test_id=test_id q_number=1 %}" class="start-button">Пройти заново</a>
+    <a href="{% url 'main'%}" class="back-button">На главную</a>
+        </div>
+</div>
+{% endblock %}

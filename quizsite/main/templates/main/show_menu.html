@@ -1,0 +1,17 @@
+<div>
+    <a href="{% url 'main' %}" class="logo">SW Tests</a>
+</div>
+{% if request.user.is_superuser %}
+<a class="title" href="{% url 'create_test' %}">Создать тест</a>
+<a class="title" href="{% url 'my_tests' %}">Мои тесты</a>
+{% endif %}
+{% if request.user.is_authenticated %}
+<div class="nav-links">
+    <a class="title" href="{% url 'logout' %}">Выйти</a>
+</div>
+{% else %}
+<div class="nav-links">
+    <a href="{% url 'register' %}" class="last">Зарегистрироваться</a>
+    <a href="{% url 'login' %}" class="last">Войти</a>
+</div>
+{% endif %}

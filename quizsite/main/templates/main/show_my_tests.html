@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% block content %}
+{% if tests %}
+<h1 class="title">Ваши тесты</h1>
+{% for t in tests %}
+
+<a href="{{ t.get_absolute_url_redact }}" class="test">
+    <div class="test-name">{{ t.name }}</div>
+    <div class="test-description">{{ t.description }}</div>
+    <div class="test-q-q">Вопросов: {{ t.question_quantity }}</div>
+</a>
+
+
+{% endfor %}
+{% else %}
+<h1 class="title">У вас нет тестов</h1>
+{% endif %}
+<p class="add-question-button"><a href="{% url 'create_test' %}" class="start-button">Добавить новый тест</a></p>
+
+{% endblock %}

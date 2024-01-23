@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% block content %}
+
+{% for q in questions %}
+ <div href=# class="question">
+     <h1 class="title">{{ q.question }} №{{q.number}}</h1>
+     <h1 class="test-q-q">Правильный ответ: {{q.correct_answer}}</h1>
+     <h1 class="title">Неправильные ответы</h1>
+     <h1 class="test-q-q">{{q.incorrect_answer_1}}</h1>
+     <h1 class="test-q-q">{{q.incorrect_answer_2}}</h1>
+     <h1 class="test-q-q">{{q.incorrect_answer_3}}</h1>
+     <div>
+         <a href="{% url 'redact_question' test_id=q.test_id q_number=q.number %}" class="start-button">Редактировать</a>
+         <a href="{% url 'delete_question' test_id=q.test_id q_number=q.number %}" class="back-button">Удалить</a>
+     </div>
+ </div>
+{% if forloop.last %}
+<p class="add-question-button"><a href="{% url 'add_question_from_redact' test_id=q.test_id %}" class="start-button">Добавить вопрос</a></p>
+{% endif %}
+{% endfor %}
+
+{% endblock %}

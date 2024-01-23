@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<h1 class="title">{{title}}</h1>
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ next }}">
+    <div class="test">
+        {% for f in form %}
+
+        <div><label class="test-name" for="{{ f.id_for_label }}">{{f.label}}: </label>
+            <p class="input-name">{{ f }}</p></div>
+        <div class="form-error">{{ f.errors }}</div>
+        {% endfor %}
+        <button type="submit" class="start-button">Начать!</button>
+    </div>
+</form>
+{% endblock %}
